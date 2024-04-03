@@ -1,0 +1,188 @@
+@api = http://localhost:8082/Usuarios 
+
+@api2 = http://localhost:8082/Paises
+
+@api3 = http://localhost:8082/Puestos
+
+@api4 = http://localhost:8082/Empleados
+
+@api5 = http://localhost:8082/Proveedores
+
+@api6 = http://localhost:8082/Roles
+
+@api7 = http://localhost:8082/Licores
+
+@api8 = http://localhost:8082/Vinos
+
+@api9 = http://localhost:8082/Marcas
+
+GET {{api}}
+
+###
+GET {{api}}/660c343b299ec4fd1094871c
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "nombre":"Diana",
+    "primerApellido":"Corrales",
+    "SegundoApellido":"Gamboa",
+    "telefono":89165599,
+    "usuario":"ldcorrales",
+    "contrasena":"prueba",
+    "privilegio":"ADM"
+}
+
+###
+GET {{api2}}
+
+###
+GET {{api2}}/660c6d74cce26a8c73737bc3
+
+###
+POST {{api2}}
+Content-Type: application/json
+
+{
+    "codigo":"CR1",
+    "nombre":"Costa Rica"
+}
+
+###
+GET {{api3}}
+
+###
+GET {{api3}}/660c703a20a967c63d6817c2
+
+###
+POST {{api3}}
+Content-Type: application/json
+
+{
+    "codigo":"MES",
+    "nombre":"Administrador",
+    "rol":"Mesero"
+}
+
+###
+GET {{api4}}
+
+###
+GET {{api4}}/660c76c7c30c13150eb0c529
+
+###
+POST {{api4}}
+Content-Type: application/json
+
+{
+"codigo": "1",
+"nombre": "Alejandro",
+"primerApellido": "Rodriguez",
+"segundoApellido": "Carvajal",
+"cedula": "109380938",
+"telefono": 88179988,
+"puesto":"Administrador",
+"nacionalidad": "Costarricense",
+"restaurante": ""
+}
+
+
+###
+GET {{api5}}
+
+###
+GET {{api5}}/660c7ac1163ba33084a94b47
+
+###
+POST {{api5}}
+Content-Type: application/json
+
+{
+"codigo": "1",
+"nombre": "Vinos y Más",
+"ingreso": "21/06/2019",
+"correo": "vinoscr@gmail.com",
+"telefono": 88752376,
+"direccion":"San José"
+}
+
+
+###
+GET {{api6}}
+
+###
+GET {{api6}}/660c7d968da6948f9db02ffe
+
+###
+POST {{api6}}
+Content-Type: application/json
+
+{
+"codigo": "ROL-1",
+"nombre": "Chef",
+"descripcion": "Jefe de turno de la cocina"
+}
+
+
+###
+GET {{api7}}
+
+###
+GET {{api7}}/660c86b512f2dc536ba4987b
+
+###
+POST {{api7}}
+Content-Type: application/json
+
+{
+"codigo": "L-1",
+"nombre": "Ron",
+"marca": "Zacapa",
+"precioBotella": 40000,
+"precioUnitario": 4000,
+"nacionalidad": "Guatemala",
+"restaurante": "Piccola Stella"
+}
+
+###
+GET {{api8}}
+
+###
+GET {{api8}}/660c89cc3f105f392889ee58
+
+###
+POST {{api8}}
+Content-Type: application/json
+
+{
+"codigo": "V-1",
+"nombre": "Porto",
+"marca": "Ferreira",
+"precioBotella": 25000,
+"precioUnitario": 2500,
+"nacionalidad": "Portugal",
+"anio":2023,
+"restaurante": "Piccola Stella"
+}
+
+
+###
+GET {{api9}}
+
+###
+GET {{api9}}/660cd25de4788ba69b3a2b6a
+
+###
+POST {{api9}}
+Content-Type: application/json
+
+{
+"codigo": "M-1",
+"nombre": "Ferreira",
+"descripcion": "Marca de vinos tipo Oporto de Portugal",
+"nacionalidad": "Portugal",
+"empresa":"Vinos y mas",
+"telefono": "8875-2376"
+}
