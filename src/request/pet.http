@@ -16,6 +16,20 @@
 
 @api9 = http://localhost:8082/Marcas
 
+@api10 = http://localhost:8082/Comestibles
+
+@api11 = http://localhost:8082/Tecnologias
+
+@api12 = http://localhost:8082/Privilegios
+
+@api13 = http://localhost:8082/Especialidades
+
+@api14 = http://localhost:8082/Gaseosas
+
+@api15 = http://localhost:8082/BebidasCalientes
+
+@api16 = http://localhost:8082/BebidasHeladas
+
 GET {{api}}
 
 ###
@@ -185,4 +199,127 @@ Content-Type: application/json
 "nacionalidad": "Portugal",
 "empresa":"Vinos y mas",
 "telefono": "8875-2376"
+}
+
+###
+GET {{api10}}
+
+###
+GET {{api10}}/660e152fd89b57fd05dddf6a
+
+###
+POST {{api10}}
+Content-Type: application/json
+
+{
+"codigo": "COM-1",
+"nombre": "Linguini",
+"cantidad": 50,
+"tipo": "Cereales",
+"restaurante":"Piccola Stella",
+"marca": "Firenze"
+}
+
+###
+GET {{api11}}
+
+###
+GET {{api11}}/660e1823949b836f0fddeb22
+
+###
+POST {{api11}}
+Content-Type: application/json
+
+{
+"codigo": "TEC-1",
+"nombre": "Computadora",
+"marca": "Dell",
+"restaurante":"Piccola Stella",
+"cantidad": 3,
+"descripcion": "Equipo de recepcion, cajas, administracion y cocina"
+}
+
+###
+GET {{api12}}
+
+###
+GET {{api12}}/660e1a34a6971bd37a6a403c
+
+###
+POST {{api12}}
+Content-Type: application/json
+
+{
+"codigo": "ADM-1",
+"nombre": "Administrador de Sistema"
+}
+
+###
+GET {{api13}}
+
+###
+GET {{api13}}/660e1e4a81cf12a90ba3f66e
+
+###
+POST {{api13}}
+Content-Type: application/json
+
+{
+"codigo": "PAS-1",
+"nombre": "Pasta",
+"ingredientes": "Pasta, carne molida, salsa de tomate, queso ricotta, mozzarella",
+"precio": 7500,
+"descripcion": "Deliciosa lasagna con capas de pasta, carne y queso"
+}
+
+###
+GET {{api14}}
+
+###
+GET {{api14}}/660e20bb3057ebf063ea3835
+
+###
+POST {{api14}}
+Content-Type: application/json
+
+{
+"codigo": "BG-1",
+"nombre": "San Pellegrino Limon",
+"precio": 2200,
+"restaurante": "Piccola Stella"
+}
+
+
+###
+GET {{api15}}
+
+###
+GET {{api15}}/660e23064c88934748d143f2
+
+###
+POST {{api15}}
+Content-Type: application/json
+
+{
+"codigo": "BC-1",
+"nombre": "Espresso",
+"precio": 1500,
+"restaurante": "Piccola Stella"
+}
+
+###
+GET {{api16}}
+
+###
+GET {{api16}}/660e24b8440981c1b9f7fb69
+
+###
+POST {{api16}}
+Content-Type: application/json
+
+{
+"codigo": "BH-1",
+"nombre": "Frozen Capuccino",
+"precio": 2000,
+"restaurante": "Piccola Stella"
 }

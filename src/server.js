@@ -8,6 +8,13 @@ import rol from './routers/rol.js'
 import licor from './routers/licor.js'
 import vino from './routers/vino.js'
 import marca from './routers/marca.js'
+import comestible from './routers/comestible.js'
+import tecnologia from './routers/tecnologia.js'
+import privilegio from './routers/privilegio.js'
+import especialidad from './routers/especialidad.js'
+import gaseosa from './routers/gaseosa.js'
+import bebidaCaliente from './routers/bebidaCaliente.js'
+import bebidaHelada from './routers/bebidaHelada.js'
 
 const app=express();
 
@@ -26,5 +33,13 @@ app.use(rol);
 app.use(licor);
 app.use(vino);
 app.use(marca);
+app.use(comestible);
+app.use(tecnologia);
+app.use(privilegio);
+app.use(especialidad);
+app.use(gaseosa);
+app.use(bebidaCaliente);
+app.use(bebidaHelada);
+
 
 export default app;
