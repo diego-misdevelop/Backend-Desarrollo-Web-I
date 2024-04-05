@@ -20,10 +20,10 @@ export const listaPrivilegios =async(req,res)=>{
 }
 
 export const obtenerPrivilegio = async (req,res)=>{
-    const {_id}=req.params;
-    console.log('obtener privilegio:',_id)
+    const {id}=req.params;
+    console.log('obtener privilegio:',id)
     try{
-        const privilegio = await Privilegios.findById(_id);
+        const privilegio = await Privilegios.findById(id);
         res.json(privilegio)
     }catch (error){
         errorfn(res,'Error al buscar el privilegio')
@@ -37,5 +37,34 @@ export const crearPrivilegio = async (req,res)=>{
         res.status(200).json(privilegioSalvado);
     }catch(error){
         errorfn(res,error.message||'Error al crear el privilegio')
+    }
+}
+
+export const eliminarPrivilegio = async (req,res)=>{
+    const {id} = req.params;
+    try{
+        const privilegioEliminado = await Privilegios.findByIdAndDelete(id);
+        if(!privilegioEliminado)return res.status(404).json({
+            message:'No se encontro privilegio para eliminar'
+        })
+        res.json(privilegioEliminado)
+    }catch(error){
+        errorfn(res,error.message||'Error al remover el privilegio')
+    }
+}
+
+export const actualizarPrivilegios = async (req,res)=>{
+    const {id} = req.params;
+    if(!req.body) return res.status(404).json({
+        message: 'Los datos para actualizar fueron enviados'
+    })
+    try{
+        const privilegioAcualizado= await Privilegios.findByIdAndUpdate(id,req.body,{new:true})
+        if(!privilegioAcualizado) res.status(404).json({
+            message:'No se pudo actualizar el método para el privilegio'
+        })
+        res.json(privilegioAcualizado)
+    }catch(error){
+        errorfn(res,error.message||'Error al actualizar el privilegio')
     }
 }

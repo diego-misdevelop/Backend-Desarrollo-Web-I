@@ -20,10 +20,10 @@ export const listaLicores =async(req,res)=>{
 }
 
 export const obtenerLicores = async (req,res)=>{
-    const {_id}=req.params;
-    console.log('obtener licor:',_id)
+    const {id}=req.params;
+    console.log('obtener licor:',id)
     try{
-        const licor = await Licores.findById(_id);
+        const licor = await Licores.findById(id);
         res.json(licor)
     }catch (error){
         errorfn(res,'Error al buscar el licor')
@@ -37,5 +37,34 @@ export const crearLicor= async (req,res)=>{
         res.status(200).json(licorSalvado);
     }catch(error){
         errorfn(res,error.message||'Error al crear el licor')
+    }
+}
+
+export const eliminarLicor = async (req,res)=>{
+    const {id} = req.params;
+    try{
+        const licorEliminado = await Licores.findByIdAndDelete(id);
+        if(!licorEliminado)return res.status(404).json({
+            message:'No se encontro licor para eliminar'
+        })
+        res.json(licorEliminado)
+    }catch(error){
+        errorfn(res,error.message||'Error al remover el licor')
+    }
+}
+
+export const actualizarLicor = async (req,res)=>{
+    const {id} = req.params;
+    if(!req.body) return res.status(404).json({
+        message: 'Los datos para actualizar fueron enviados'
+    })
+    try{
+        const licorAcualizada= await Licores.findByIdAndUpdate(id,req.body,{new:true})
+        if(!licorAcualizada) res.status(404).json({
+            message:'No se pudo actualizar el método para el licor'
+        })
+        res.json(licorAcualizada)
+    }catch(error){
+        errorfn(res,error.message||'Error al actualizar el licor')
     }
 }

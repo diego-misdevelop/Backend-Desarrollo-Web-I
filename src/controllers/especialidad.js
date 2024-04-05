@@ -20,10 +20,10 @@ export const listaEspecialidades =async(req,res)=>{
 }
 
 export const obtenerEspecialidad = async (req,res)=>{
-    const {_id}=req.params;
-    console.log('obtener especialidad:',_id)
+    const {id}=req.params;
+    console.log('obtener especialidad:',id)
     try{
-        const especialidad = await Especialidades.findById(_id);
+        const especialidad = await Especialidades.findById(id);
         res.json(especialidad)
     }catch (error){
         errorfn(res,'Error al buscar la especialidad')
@@ -37,5 +37,34 @@ export const crearEspecialidad = async (req,res)=>{
         res.status(200).json(especialidadSalvado);
     }catch(error){
         errorfn(res,error.message||'Error al crear la especialidad')
+    }
+}
+
+export const eliminarEspecialidad = async (req,res)=>{
+    const {id} = req.params;
+    try{
+        const especialidadEliminada = await Especialidades.findByIdAndDelete(id);
+        if(!especialidadEliminada)return res.status(404).json({
+            message:'No se encontro especialidad para eliminar'
+        })
+        res.json(especialidadEliminada)
+    }catch(error){
+        errorfn(res,error.message||'Error al remover la especialidad')
+    }
+}
+
+export const actualizarEspecialidad = async (req,res)=>{
+    const {id} = req.params;
+    if(!req.body) return res.status(404).json({
+        message: 'Los datos para actualizar fueron enviados'
+    })
+    try{
+        const especialidadAcualizada = await Especialidades.findByIdAndUpdate(id,req.body,{new:true})
+        if(!especialidadAcualizada) res.status(404).json({
+            message:'No se pudo actualizar el método para la especialidad'
+        })
+        res.json(especialidadAcualizada)
+    }catch(error){
+        errorfn(res,error.message||'Error al actualizar la especialidad')
     }
 }

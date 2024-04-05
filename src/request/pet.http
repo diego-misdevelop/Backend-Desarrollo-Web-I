@@ -50,6 +50,22 @@ Content-Type: application/json
 }
 
 ###
+DELETE {{api}}/660f715a242f3fcbf9de263a
+
+###
+PATCH {{api}}/660c343b299ec4fd1094871c
+Content-Type: application/json
+
+{
+"codigo": "TEC-1",
+"nombre": "asdfasdf",
+"marca": "asdfasdf",
+"restaurante":"Piccola Stella",
+"cantidad": 3,
+"descripcion": "Equipo de recepcion, cajas, administracion y cocina"
+}
+
+###
 GET {{api2}}
 
 ###
@@ -65,6 +81,19 @@ Content-Type: application/json
 }
 
 ###
+DELETE {{api2}}/660c6d74cce26a8c73737bc3
+
+###
+PATCH {{api2}}/660f7bd4f28d6350c4bea1fd
+Content-Type: application/json
+
+{
+    "codigo":"CR1",
+    "nombre":"afsdfasdf Rica"
+}
+
+
+###
 GET {{api3}}
 
 ###
@@ -77,6 +106,19 @@ Content-Type: application/json
 {
     "codigo":"MES",
     "nombre":"Administrador",
+    "rol":"Mesero"
+}
+
+###
+DELETE {{api3}}/660f6fad14656eeee3a6edfe
+
+###
+PATCH {{api3}}/660c703a20a967c63d6817c2
+Content-Type: application/json
+
+{
+    "codigo":"MES",
+    "nombre":"asdfasdf",
     "rol":"Mesero"
 }
 
@@ -102,6 +144,24 @@ Content-Type: application/json
 "restaurante": ""
 }
 
+###
+DELETE {{api4}}/660c76c7c30c13150eb0c529
+
+###
+PATCH {{api4}}/660f765f549b366506987851
+Content-Type: application/json
+
+{
+"codigo": "1",
+"nombre": "David",
+"primerApellido": "Rodriguez",
+"segundoApellido": "Quiros",
+"cedula": "109380938",
+"telefono": 88179988,
+"puesto":"Administrador",
+"nacionalidad": "Costarricense",
+"restaurante": ""
+}
 
 ###
 GET {{api5}}
@@ -116,6 +176,22 @@ Content-Type: application/json
 {
 "codigo": "1",
 "nombre": "Vinos y Más",
+"ingreso": "21/06/2019",
+"correo": "vinoscr@gmail.com",
+"telefono": 88752376,
+"direccion":"San José"
+}
+
+###
+DELETE {{api5}}/660f6f10ebb2bd03e0d30f8c
+
+###
+PATCH {{api5}}/660f7f1a84aedf331d22e3fa
+Content-Type: application/json
+
+{
+"codigo": "1",
+"nombre": "asdfa y Más",
 "ingreso": "21/06/2019",
 "correo": "vinoscr@gmail.com",
 "telefono": 88752376,
@@ -139,6 +215,18 @@ Content-Type: application/json
 "descripcion": "Jefe de turno de la cocina"
 }
 
+###
+DELETE {{api6}}/660c7d968da6948f9db02ffe
+
+###
+PATCH {{api6}}/660f8074d498ac393a48eda1
+Content-Type: application/json
+
+{
+"codigo": "ROL-1",
+"nombre": "asdfasdf",
+"descripcion": "Jefe de turno de la cocina"
+}
 
 ###
 GET {{api7}}
@@ -161,6 +249,9 @@ Content-Type: application/json
 }
 
 ###
+DELETE {{api7}}/660c86ce12f2dc536ba4987d
+
+###
 GET {{api8}}
 
 ###
@@ -181,6 +272,23 @@ Content-Type: application/json
 "restaurante": "Piccola Stella"
 }
 
+###
+DELETE {{api8}}/660c89cc3f105f392889ee58
+
+###
+PATCH {{api8}}/660f82cce3164e383e98ddeb
+Content-Type: application/json
+
+{
+"codigo": "V-1",
+"nombre": "Porto",
+"marca": "asfsadf",
+"precioBotella": 25000,
+"precioUnitario": 2500,
+"nacionalidad": "asdfasdf",
+"anio":2023,
+"restaurante": "Piccola Stella"
+}
 
 ###
 GET {{api9}}
@@ -198,7 +306,23 @@ Content-Type: application/json
 "descripcion": "Marca de vinos tipo Oporto de Portugal",
 "nacionalidad": "Portugal",
 "empresa":"Vinos y mas",
-"telefono": "8875-2376"
+"telefono": 88752376
+}
+
+###
+DELETE {{api9}}/660f6d894954d5ae613424f7
+
+###
+PATCH {{api9}}/660f7aa22d3da6d69e2460d2
+Content-Type: application/json
+
+{
+"codigo": "M-1",
+"nombre": "asdfasdfa",
+"descripcion": "Marasdfasdfasdf",
+"nacionalidad": "Portugal",
+"empresa":"Vinos y mas",
+"telefono": 88752376
 }
 
 ###
@@ -217,6 +341,22 @@ Content-Type: application/json
 "cantidad": 50,
 "tipo": "Cereales",
 "restaurante":"Piccola Stella",
+"marca": "Firenze"
+}
+
+###
+DELETE {{api10}}/660e152fd89b57fd05dddf6a
+
+###
+PATCH {{api10}}/660f75d09c86a56f4d7a4130
+Content-Type: application/json
+
+{
+"codigo": "COM-1",
+"nombre": "Prueba actualiza",
+"cantidad": 50,
+"tipo": "Cereales",
+"restaurante":"Picfgddsgfhdfg",
 "marca": "Firenze"
 }
 
@@ -240,6 +380,22 @@ Content-Type: application/json
 }
 
 ###
+DELETE {{api11}}/660f70a9a05397ea25618ff4
+
+###
+PATCH {{api11}}/660f811d92d572dc120f9eb2
+Content-Type: application/json
+
+{
+"codigo": "TEC-1",
+"nombre": "asdfasdf",
+"marca": "Dell",
+"restaurante":"Piccola Stella",
+"cantidad": 3,
+"descripcion": "Equipo de recepcion, cajas, administracion y cocina"
+}
+
+###
 GET {{api12}}
 
 ###
@@ -255,10 +411,23 @@ Content-Type: application/json
 }
 
 ###
+DELETE {{api12}}/660f6e8649fd0170f8398274
+
+###
+PATCH {{api12}}/660e1a34a6971bd37a6a403c
+Content-Type: application/json
+
+{
+"codigo": "ADM-1",
+"nombre": "aSDasdAS de Sistema"
+}
+
+
+###
 GET {{api13}}
 
 ###
-GET {{api13}}/660e1e4a81cf12a90ba3f66e
+GET {{api13}}/660f6a78e6d1a22070cbe413
 
 ###
 POST {{api13}}
@@ -268,6 +437,21 @@ Content-Type: application/json
 "codigo": "PAS-1",
 "nombre": "Pasta",
 "ingredientes": "Pasta, carne molida, salsa de tomate, queso ricotta, mozzarella",
+"precio": 7500,
+"descripcion": "Deliciosa lasagna con capas de pasta, carne y queso"
+}
+
+###
+DELETE {{api13}}/660f6a78e6d1a22070cbe413
+
+###
+PATCH {{api13}}/660f6a78e6d1a22070cbe413
+Content-Type: application/json
+
+{
+"codigo": "PAS-1",
+"nombre": "Huevo",
+"ingredientes": "asdfasdfasdf",
 "precio": 7500,
 "descripcion": "Deliciosa lasagna con capas de pasta, carne y queso"
 }
@@ -289,12 +473,28 @@ Content-Type: application/json
 "restaurante": "Piccola Stella"
 }
 
+###
+DELETE {{api14}}/660f6b3e6685a2702e61a976
+
+###
+PATCH {{api14}}/660f78856470dac238a3b286
+Content-Type: application/json
+
+{
+"codigo": "BG-1",
+"nombre": "San asdfasdfasdf Limon",
+"precio": 2200,
+"restaurante": "Piccola Stella"
+}
+
+###
+GET {{api15}}/660f6b3e6685a2702e61a976
 
 ###
 GET {{api15}}
 
 ###
-GET {{api15}}/660e23064c88934748d143f2
+GET {{api15}}/660f65b37df9e6d1e523980d
 
 ###
 POST {{api15}}
@@ -308,10 +508,24 @@ Content-Type: application/json
 }
 
 ###
+DELETE {{api15}}/660f65b37df9e6d1e523980d
+
+###
+PATCH {{api15}}/660f73fbde26fe74ec609ad1
+Content-Type: application/json
+
+{
+"codigo": "SDFGSDFG-1",
+"nombre": "dIEGO",
+"precio": 32333,
+"restaurante": "ASDFWEEDSSAD SDFGSDFGS"
+}
+
+###
 GET {{api16}}
 
 ###
-GET {{api16}}/660e24b8440981c1b9f7fb69
+GET {{api16}}/660f66786a0a3f0ae05892fd
 
 ###
 POST {{api16}}
@@ -322,4 +536,18 @@ Content-Type: application/json
 "nombre": "Frozen Capuccino",
 "precio": 2000,
 "restaurante": "Piccola Stella"
+}
+
+###
+DELETE {{api16}}/660e24b8440981c1b9f7fb69
+
+###
+PATCH {{api16}}/660f67d5a5ebd8af0edc2432
+Content-Type: application/json
+
+{
+"codigo": "SDFGSDFG-1",
+"nombre": "dIEGO",
+"precio": 32333,
+"restaurante": "ASDFWEEDSSAD SDFGSDFGS"
 }
