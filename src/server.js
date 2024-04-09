@@ -15,6 +15,10 @@ import especialidad from './routers/especialidad.js'
 import gaseosa from './routers/gaseosa.js'
 import bebidaCaliente from './routers/bebidaCaliente.js'
 import bebidaHelada from './routers/bebidaHelada.js'
+import consecutivo from './routers/consecutivo.js'
+import restaurante from './routers/restaurante.js'
+import desechableEmpaque from './routers/desechableEmpaque.js'
+import limpiezaHigiene from './routers/limpiezaHigiene.js'
 
 const app=express();
 
@@ -40,6 +44,9 @@ app.use(especialidad);
 app.use(gaseosa);
 app.use(bebidaCaliente);
 app.use(bebidaHelada);
-
+app.use(consecutivo);
+app.use(restaurante);
+app.use(desechableEmpaque);
+app.use(limpiezaHigiene)
 
 export default app;

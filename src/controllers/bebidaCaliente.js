@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import {BebidasCalientesSchema} from '../models/bebidaCaliente.js';
+import bcrypt from 'bcryptjs';
 
 const BebidasCalientes = mongoose.model('BebidasCalientes', BebidasCalientesSchema);
 
@@ -31,12 +32,25 @@ export const obtenerBebidaCaliente = async (req,res)=>{
 }
 
 export const crearBebidaCaliente = async (req,res)=>{
-    const bebidaCaliente= new BebidasCalientes(req.body)
-    try{
-        const bebidaCalienteSalvado= await bebidaCaliente.save();
-        res.status(200).json(bebidaCalienteSalvado);
-    }catch(error){
-        errorfn(res,error.message||'Error al crear la bebida caliente')
+    const { codigo, nombre, precio, restaurante } = req.body;
+
+    const hashedCodigo = await bcrypt.hash(codigo, 10);
+    const hashedNombre = await bcrypt.hash(nombre, 10);
+    const hashedPrecio = await bcrypt.hash(precio.toString(), 10); // Convertir a string antes de encriptar
+    const hashedRestaurante = await bcrypt.hash(restaurante, 10);
+
+    const bebidaCaliente = new BebidasCalientes({
+        codigo: hashedCodigo,
+        nombre: hashedNombre,
+        precio: hashedPrecio,
+        restaurante: hashedRestaurante
+    });
+
+    try {
+        const bebidaCalienteGuardada = await bebidaCaliente.save();
+        res.status(200).json(bebidaCalienteGuardada);
+    } catch (error) {
+        errorfn(res, error.message || 'Error al crear la bebida caliente');
     }
 }
 

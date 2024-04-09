@@ -15,7 +15,7 @@ export const BebidasCalientesSchema = new schema({
     },
 
     precio:{
-        type:Number,
+        type:String,
         require:"Por favor indique el precio"
     },
 

@@ -30,6 +30,14 @@
 
 @api16 = http://localhost:8082/BebidasHeladas
 
+@api17 = http://localhost:8082/Consecutivos
+
+@api18 = http://localhost:8082/Restaurantes
+
+@api19 = http://localhost:8082/DesechablesEmpaques
+
+@api20 = http://localhost:8082/LimpiezaHigiene
+
 GET {{api}}
 
 ###
@@ -550,4 +558,138 @@ Content-Type: application/json
 "nombre": "dIEGO",
 "precio": 32333,
 "restaurante": "ASDFWEEDSSAD SDFGSDFGS"
+}
+
+###
+GET {{api17}}
+
+###
+GET {{api17}}/660f66786a0a3f0ae05892fd
+
+###
+POST {{api17}}
+Content-Type: application/json
+
+{
+"codigo": "PE-2",
+"descripcion": "servicios",
+"valorConsecutivo": 1
+}
+
+###
+DELETE {{api17}}/6613123865aebbe0df01b9fe
+
+###
+PATCH {{api17}}/6613123865aebbe0df01b9fe
+Content-Type: application/json
+
+{
+"codigo": "PE-2",
+"descripcion": "asdf",
+"valorConsecutivo": 1
+}
+
+###
+GET {{api18}}
+
+###
+GET {{api18}}/6613164e0ea5c69fc74ba65c
+
+###
+POST {{api18}}
+Content-Type: application/json
+
+{
+"codigo": "RES-1",
+"nombre": "Piccola Stella",
+"especialidad": "Comida Italiana Tradicional",
+"direccion":"San Jose, Costa Rica",
+"telefono": 22223132,
+"estado":"Activo"
+}
+
+###
+DELETE {{api18}}/6613166e0ea5c69fc74ba665
+
+###
+PATCH {{api18}}/661316ab488582f683f2978a
+Content-Type: application/json
+
+{
+"codigo": "RES-1",
+"nombre": "Piccola Stella",
+"especialidad": "Comida Italiana Tradicional",
+"direccion":"San Jose, ASDFASFSD Rica",
+"telefono": 22223132,
+"estado":"Activo"
+}
+
+###
+GET {{api19}}
+
+###
+GET {{api19}}/6613164e0ea5c69fc74ba65c
+
+###
+POST {{api19}}
+Content-Type: application/json
+
+{
+"codigo": "DE-1",
+"nombre": "Cajas de postre",
+"restaurante": "Piccola Stella",
+"marca":"ACME",
+"cantidad": 5,
+"descripcion":"cajas biodegradables para postre"
+}
+
+###
+DELETE {{api19}}/66148fda0b763201c8f331e9
+
+###
+PATCH {{api19}}/66148fe80b763201c8f331eb
+Content-Type: application/json
+
+{
+"codigo": "RES-1",
+"nombre": "Piccola asdfasdfasdf",
+"especialidad": "Comida Italiana Tradicional",
+"direccion":"San Jose, ASDFASFSD Rica",
+"telefono": 22223132,
+"estado":"Activo"
+}
+
+###
+GET {{api20}}
+
+###
+GET {{api20}}/6613164e0ea5c69fc74ba65c
+
+###
+POST {{api20}}
+Content-Type: application/json
+
+{
+"codigo": "LH-1",
+"nombre": "Esponjas lavaplatos",
+"restaurante": "Piccola Stella",
+"marca":"Portugal",
+"cantidad": 40,
+"descripcion":"Esponjas de alambre para uso en cocina"
+}
+
+###
+DELETE {{api20}}/661499fb780a6fd1e3bef82b
+
+###
+PATCH {{api20}}/661499f9780a6fd1e3bef829
+Content-Type: application/json
+
+{
+"codigo": "LH-1",
+"nombre": "Esponjas asdf",
+"restaurante": "Piccola asdf",
+"marca":"Portugal",
+"cantidad": 40,
+"descripcion":"Esponjas de alambre para uso en cocina"
 }
