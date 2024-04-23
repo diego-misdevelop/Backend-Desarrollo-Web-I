@@ -19,6 +19,8 @@ import consecutivo from './routers/consecutivo.js'
 import restaurante from './routers/restaurante.js'
 import desechableEmpaque from './routers/desechableEmpaque.js'
 import limpiezaHigiene from './routers/limpiezaHigiene.js'
+import usuarioRouter from './routers/usuario.js'
+import factura from './routers/factura.js'
 
 const app=express();
 
@@ -47,6 +49,8 @@ app.use(bebidaHelada);
 app.use(consecutivo);
 app.use(restaurante);
 app.use(desechableEmpaque);
-app.use(limpiezaHigiene)
+app.use(limpiezaHigiene);
+app.use(usuarioRouter);
+app.use(factura);
 
 export default app;

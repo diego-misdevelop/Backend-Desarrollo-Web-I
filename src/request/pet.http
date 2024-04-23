@@ -38,6 +38,10 @@
 
 @api20 = http://localhost:8082/LimpiezaHigiene
 
+@api21 = http://localhost:8082/login
+
+@api22 = http://localhost:8082/Facturas
+
 GET {{api}}
 
 ###
@@ -496,9 +500,6 @@ Content-Type: application/json
 }
 
 ###
-GET {{api15}}/660f6b3e6685a2702e61a976
-
-###
 GET {{api15}}
 
 ###
@@ -516,10 +517,10 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{api15}}/660f65b37df9e6d1e523980d
+DELETE {{api15}}/6614ac52ce9de63f60b6e6b7
 
 ###
-PATCH {{api15}}/660f73fbde26fe74ec609ad1
+PATCH {{api15}}/661b4ca6028d56bd59f10c08
 Content-Type: application/json
 
 {
@@ -692,4 +693,46 @@ Content-Type: application/json
 "marca":"Portugal",
 "cantidad": 40,
 "descripcion":"Esponjas de alambre para uso en cocina"
+}
+
+###
+POST {{api21}}
+Content-Type: application/json
+
+{
+"usuario": "ldcorrales",
+"contrasena": "prueba"
+}
+
+###
+GET {{api22}}
+
+###
+GET {{api22}}/660c343b299ec4fd1094871c
+
+###
+POST {{api22}}
+Content-Type: application/json
+
+{
+    "codigo":"FAC-1",
+    "nombre":"Diego",
+    "producto":"Almuerzo",
+    "cantidad":1,
+    "total":4000
+}
+
+###
+DELETE {{api22}}/662848e1edd842fc7c369293
+
+###
+PATCH {{api22}}/662848e1edd842fc7c369293
+Content-Type: application/json
+
+{
+    "codigo":"FAC-1",
+    "nombre":"Diego",
+    "producto":"Helado",
+    "cantidad":1,
+    "total":4000
 }
